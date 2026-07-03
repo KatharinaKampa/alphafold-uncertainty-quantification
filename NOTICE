@@ -1,0 +1,26 @@
+This project is a derivative work of DeepMind's official AlphaFold Colab
+notebook (https://github.com/deepmind/alphafold), Copyright 2021 DeepMind
+Technologies Limited, licensed under the Apache License, Version 2.0.
+
+Modifications made by Katharina Kampa (2026):
+
+  - Added sequence perturbation logic (`perturb_sequence`) to generate an
+    ensemble of mutated variants of the input protein sequence.
+  - Extended the prediction pipeline to run AlphaFold across the perturbed
+    sequence ensemble and aggregate results (mean, standard deviation).
+  - Added loading and parsing of experimental ground-truth structures from
+    PDB files via Biopython.
+  - Added quantitative evaluation of prediction uncertainty: Mean Absolute
+    Error (MAE), Root Mean Square Error (RMSE), confidence interval width,
+    prediction variance, coverage, and Concordance Correlation Coefficient
+    (CCC), comparing predicted structures against the experimental structure.
+  - Added corresponding visualizations of prediction error and uncertainty.
+
+The original AlphaFold model code, setup cells, and license/disclaimer
+sections are retained from the original DeepMind notebook and are not
+original work of this project's author.
+
+See the LICENSE file for the full Apache License 2.0 text, and the
+notebook itself for DeepMind's original license, disclaimer, and
+third-party/database attribution notices (Apache-2.0, CC-BY 4.0 for
+model parameters, and mirrored database licenses).
