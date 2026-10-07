@@ -7,14 +7,16 @@ Modifications made by Katharina Kampa (2026):
   - Added sequence perturbation logic (`perturb_sequence`) to generate an
     ensemble of mutated variants of the input protein sequence.
   - Extended the prediction pipeline to run AlphaFold across the perturbed
-    sequence ensemble and aggregate results (mean, standard deviation).
-  - Added loading and parsing of experimental ground-truth structures from
-    PDB files via Biopython.
-  - Added quantitative evaluation of prediction uncertainty: Mean Absolute
-    Error (MAE), Root Mean Square Error (RMSE), confidence interval width,
-    prediction variance, coverage, and Concordance Correlation Coefficient
-    (CCC), comparing predicted structures against the experimental structure.
-  - Added corresponding visualizations of prediction error and uncertainty.
+    sequence ensemble and aggregate results (mean, variance, percentile
+    intervals).
+  - Added loading and parsing of a reference structure from a PDB file via
+    Biopython.
+  - Added evaluation code computing Mean Absolute Error (MAE), Root Mean
+    Square Error (RMSE), confidence interval width, prediction variance,
+    coverage and Concordance Correlation Coefficient (CCC) against the
+    reference structure. See the README ("Known issues") for limitations of
+    this evaluation.
+  - Added corresponding visualizations.
 
 The original AlphaFold model code, setup cells, and license/disclaimer
 sections are retained from the original DeepMind notebook and are not
